@@ -34,3 +34,7 @@ FROM password_entries
 JOIN users
 ON password_entries.user_id = users.user_id
 WHERE password_entries.url LIKE 'https%';
+
+UPDATE password_entries
+SET url = 'https://github.com'
+WHERE url = 'http://github.com';
