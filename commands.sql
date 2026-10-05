@@ -38,3 +38,7 @@ WHERE password_entries.url LIKE 'https%';
 UPDATE password_entries
 SET url = 'https://github.com'
 WHERE url = 'http://github.com';
+
+UPDATE password_entries
+SET password = AES_ENCRYPT('NewTestPassword!', @key)
+WHERE website_name = 'Spotify';
