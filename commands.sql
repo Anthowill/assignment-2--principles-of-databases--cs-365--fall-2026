@@ -13,3 +13,10 @@ VALUES
     'Programming account',
     NOW()
 );
+
+SELECT
+    url,
+    AES_DECRYPT(password, @key) AS password
+FROM password_entries
+WHERE url = 'https://mysql.com';
+
