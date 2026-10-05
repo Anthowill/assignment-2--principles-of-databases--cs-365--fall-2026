@@ -71,3 +71,39 @@ VALUES
     'Spotify account',
     '2026-03-20 12:00:00'
 );
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Discord',
+    'http://discord.com',
+    AES_ENCRYPT('TestPassword4!', @key),
+    'Discord account',
+    '2026-04-10 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Steam',
+    'http://store.steampowered.com',
+    AES_ENCRYPT('TestPassword5!', @key),
+    'Steam account',
+    '2026-05-01 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Reddit',
+    'http://reddit.com',
+    AES_ENCRYPT('TestPassword6!', @key),
+    'Reddit account',
+    '2026-05-18 12:00:00'
+);
