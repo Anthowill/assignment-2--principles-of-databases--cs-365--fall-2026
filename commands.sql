@@ -42,3 +42,6 @@ WHERE url = 'http://github.com';
 UPDATE password_entries
 SET password = AES_ENCRYPT('NewTestPassword!', @key)
 WHERE website_name = 'Spotify';
+
+DELETE FROM password_entries
+WHERE url = 'http://trello.com';
