@@ -20,3 +20,17 @@ SELECT
 FROM password_entries
 WHERE url = 'https://mysql.com';
 
+SELECT
+    users.first_name,
+    users.last_name,
+    users.username,
+    users.email,
+    password_entries.website_name,
+    password_entries.url,
+    AES_DECRYPT(password_entries.password, @key) AS password,
+    password_entries.comment,
+    password_entries.created_at
+FROM password_entries
+JOIN users
+ON password_entries.user_id = users.user_id
+WHERE password_entries.url LIKE 'https%';
