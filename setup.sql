@@ -24,3 +24,12 @@ CREATE TABLE password_entries (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
+INSERT INTO users
+(first_name, last_name, username, email)
+VALUES
+(
+    'Anthony',
+    'Williams',
+    'anthonyw',
+    'anthony@example.com'
+);
