@@ -33,3 +33,41 @@ VALUES
     'anthonyw',
     'anthony@example.com'
 );
+
+SET @key = 'database-key';
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'MySQL',
+    'https://mysql.com',
+    AES_ENCRYPT('TestPassword1!', @key),
+    'MySQL account',
+    '2026-01-10 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'GitHub',
+    'http://github.com',
+    AES_ENCRYPT('TestPassword2!', @key),
+    'GitHub account',
+    '2026-02-15 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Spotify',
+    'http://spotify.com',
+    AES_ENCRYPT('TestPassword3!', @key),
+    'Spotify account',
+    '2026-03-20 12:00:00'
+);
