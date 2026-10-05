@@ -107,3 +107,51 @@ VALUES
     'Reddit account',
     '2026-05-18 12:00:00'
 );
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'LinkedIn',
+    'http://linkedin.com',
+    AES_ENCRYPT('TestPassword7!', @key),
+    'LinkedIn account',
+    '2026-06-05 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Dropbox',
+    'http://dropbox.com',
+    AES_ENCRYPT('TestPassword8!', @key),
+    'Dropbox account',
+    '2026-06-20 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Trello',
+    'http://trello.com',
+    AES_ENCRYPT('TestPassword9!', @key),
+    'Trello account',
+    '2026-07-15 12:00:00'
+);
+
+INSERT INTO password_entries
+(user_id, website_name, url, password, comment, created_at)
+VALUES
+(
+    1,
+    'Hartford',
+    'https://hartford.edu',
+    AES_ENCRYPT('TestPassword10!', @key),
+    'School account',
+    '2026-08-20 12:00:00'
+);
